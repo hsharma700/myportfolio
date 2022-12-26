@@ -1,0 +1,63 @@
+header{
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header_container{
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+
+/*======CTA=======*/
+.dwn{
+margin-top: 2.5rem;
+display: flex;
+gap: 1.2rem;
+justify-content: center;
+}
+
+/*======ME=======*/
+
+.me{
+    background: linear-gradient(transparent,var(--color-primary));
+    width: 22rem;
+    height: 24rem;
+    position: relative;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+/*======Scroll-Down=======*/
+
+.scroll_down{
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+
+/*======Media Query (Tablet)=======*/
+@media screen and (max-width:1024px) {
+    .header{
+        height: 68vh;
+    }
+}
+/*======Media Query (Mobile)=======*/
+@media screen and (max-width:600px) {
+    .header{
+        height: 100vh;
+    }
+
+    .scroll_down{
+        display: none;
+    }
+}

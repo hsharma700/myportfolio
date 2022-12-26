@@ -1,0 +1,130 @@
+*{
+    // border: 1px solid red;
+}
+.about_container{
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap: 5%;
+    align-items: center;
+}
+
+
+.about_me{
+    width: 70%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+    display: grid;
+    place-items: center;
+}
+
+.about_me-image{
+    background: linear-gradient(
+        135deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+.about_me-image:hover{
+    transform: rotate(0);
+}
+
+
+.my_details{
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.experience_frontend{
+    background: var(--color-primary-dark);
+    padding: 2.4rem;
+    width: 100%;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+.experience_frontend:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+    cursor: default;
+}
+
+.experience_frontend h3{
+    text-align: center;
+    color: var(--color-white);
+    margin-bottom: 2rem;
+    row-gap: 2rem;
+}
+.experience_details{
+    display: flex;
+    gap: 1rem;
+    margin: 2rem;
+    color: rgb(225, 255, 180);
+}
+
+.experience_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*=============Media Query (Tablet)=========*/
+
+@media screen and (max-width:1024px) {
+    .about_container{
+        grid-template-columns: 1fr;
+    }
+   
+    .about_me{
+        width: 40%;
+        margin: 2rem auto 4rem;
+    }
+    .my_details{
+        grid-template-columns: 1fr;
+    }
+    .my_details > div{
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+
+    }
+    .experience_content{
+        padding: 1rem;
+    }
+}
+
+/*=============Media Query (Mobiles)=========*/
+
+@media screen and (max-width:1024px) {
+    .about_container{
+        grid-template-columns: 1fr;
+    }
+   
+    .about_me{
+        width: 40%;
+        margin: 2rem auto 4rem;
+    }
+    .my_details{
+        grid-template-columns: 1fr;
+    }
+    .my_details > div{
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+
+    }
+    .experience_content{
+       gap: 1rem;
+    }
+}
