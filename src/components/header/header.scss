@@ -22,15 +22,30 @@ justify-content: center;
 /*======ME=======*/
 
 .me{
-    background: linear-gradient(transparent,var(--color-primary));
-    width: 22rem;
-    height: 24rem;
+    // background: linear-gradient(transparent,var(--color-primary));
+    width: 20rem;
+    height: 22rem;
     position: relative;
-    left: calc(50% - 11rem);
+    left: calc(50% - 10rem);
     margin-top: 4rem;
     border-radius: 2rem;
     overflow: hidden;
     padding: 2rem 0;
+    background: linear-gradient(120deg,transparent, var(--color-primary), transparent);
+    animation: gradientMovement 6s infinite ease-in-out;
+    background-size: 250%;
+    
+}
+
+@keyframes gradientMovement {
+    0%{
+        background-position:left;
+    }50%{
+        background-position: right;
+    }
+    100%{
+        background-position:left;
+    }
 }
 
 /*======Scroll-Down=======*/
@@ -53,10 +68,19 @@ justify-content: center;
 }
 /*======Media Query (Mobile)=======*/
 @media screen and (max-width:600px) {
-    .header{
-        height: 100vh;
+    *{
+        // border: 1px solid red;
     }
+    header{
+        height: 120vh;
 
+}
+.header_container{
+}
+
+    .me{
+
+    }
     .scroll_down{
         display: none;
     }

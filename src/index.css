@@ -41,10 +41,18 @@ body{
     background: var(--color-bg);
     color:var(--color-white);
     line-height: 1.7;
-    background-image: url(../src/assets/mybg1.jpg);
+    background-image: url(../src/assets/mybg4.jpg);
     width: 100%;
+    background-size: 150%;
+    animation: imageMove 60s infinite alternate;
 }
-
+@keyframes imageMove {
+    0%{
+        background-position: left;
+    }50%{
+        background-position: right;
+    }
+}
 
 /*=====General Style======*/
 
@@ -130,7 +138,7 @@ img{
     }
 }
 /*============Media Querie (Mobiles)=========*/
-@media screen and (max-width:1024px) {
+@media screen and (max-width:600px) {
     .container{
         width: var(--container-width-sm);
     }
