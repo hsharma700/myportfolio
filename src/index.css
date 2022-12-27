@@ -35,6 +35,10 @@ html{
     display: none;
 }
 
+::placeholder{
+    color: rgba(255, 255, 255, 0.72);
+}
+
 body{
     font-family: 'Alkalami', serif;
     font-family: 'Poppins', sans-serif;

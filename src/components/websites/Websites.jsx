@@ -1,5 +1,7 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import "./websites.scss";
+import {motion,useInView} from "framer-motion";
+
 import Website1 from "../../assets/portfolio1.png"
 import Website2 from "../../assets/portfolio2.png"
 import Website3 from "../../assets/portfolio3.png"
@@ -41,13 +43,26 @@ const websitesData = [
 
 
 function Websites() {
+
+  const ref = useRef(null)
+  const isInView = useInView(ref, {once:true})
+
   return (
-    <section id='websites'>
-      <h5>Projects</h5>
-      <h2>Websites</h2>
+    <section id='websites' ref={ref}>
+      <motion.h5
+      animate={{opacity:isInView?1:0}}
+      transition={{duration:isInView?1:0}}
+      >Projects</motion.h5>
+      <motion.h2
+        animate={{opacity:isInView?1:0}}
+      transition={{duration:isInView?1:0}}
+      >Websites</motion.h2>
       <div className="container portfolio_container">
-       {websitesData.map((item)=>
-        <article className="portfolio_item">
+       {websitesData.map((item,index)=>
+        <motion.article className="portfolio_item"
+        animate={{opacity:isInView?1:0}}
+        transition={{duration:isInView?1:0,delay:isInView?index:0}}
+        >
         <div className="portfolio_item-image">
           <img src={item.image} alt="" />
         </div>
@@ -56,7 +71,7 @@ function Websites() {
           <a href={item.github} className='btn' target="_blank">Github</a>
           <a href={item.live} className='btn btn-primary' target="_blank">Live View</a>
           </div>
-      </article>
+      </motion.article>
        )}
         
 
