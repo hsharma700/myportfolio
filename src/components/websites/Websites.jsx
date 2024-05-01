@@ -68,8 +68,8 @@ function Websites() {
         </div>
           <h3>{item.title}</h3>
           <div className='portfolio_item-cta'>
-          <a href={item.github} className='btn' target="_blank">Github</a>
-          <a href={item.live} className='btn btn-primary' target="_blank">Live View</a>
+          <a href={item.github} className='btn' target="_blank" rel="noreferrer">Github</a>
+          <a href={item.live} className='btn btn-primary' target="_blank" rel="noreferrer">Live View</a>
           </div>
       </motion.article>
        )}
