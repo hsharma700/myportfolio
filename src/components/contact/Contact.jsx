@@ -31,13 +31,13 @@ function Contact() {
             <SiMinutemailer className='contact_option-icon'/>
               <h4>Email</h4>
               <h5>himanshusharmaok@gmail.com</h5>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=himanshusharmaok@gmail.com" target="_blank">Send a Mail</a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=himanshusharmaok@gmail.com" target="_blank" rel="noreferrer">Send a Mail</a>
           </article>
           <article className='contact_option'>
             <SiMinutemailer className='contact_option-icon'/>
               <h4>WhatsApp</h4>
               <h5>+917814541207</h5>
-              <a href="https://api.whatsapp.com/send?phone=917814541207" target="_blank">Send a Message</a>
+              <a href="https://api.whatsapp.com/send?phone=917814541207" target="_blank" rel="noreferrer">Send a Message</a>
           </article>
         </div>
         <form ref={form} onSubmit={sendEmail}>
