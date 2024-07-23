@@ -1,5 +1,3 @@
-https://hsharma700.github.io/myportfolio/
-
 ![screencapture-hsharma700-github-io-myportfolio-2022-12-28-12_02_21](https://user-images.githubusercontent.com/70624640/209770078-7160cb04-c883-4e35-8867-81fbc03b12bc.png)
 
 
